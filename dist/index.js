@@ -20,11 +20,63 @@ employee = [
 //Unions:- 
 let pid = 2;
 //Enum 
-var Direction;
-(function (Direction) {
-    Direction["up"] = "up";
-    Direction["down"] = "down";
-    Direction["left"] = "left";
-    Direction["right"] = "right";
-})(Direction || (Direction = {}));
-console.log(Direction.up);
+var Dir;
+(function (Dir) {
+    Dir[Dir["up"] = 1] = "up";
+    Dir[Dir["down"] = 2] = "down";
+    Dir[Dir["left"] = 3] = "left";
+    Dir[Dir["right"] = 4] = "right";
+})(Dir || (Dir = {}));
+// console.log(Dir.left);
+//Objects
+const user = {
+    id: 1,
+    f_name: 'John',
+    l_name: 'Smith',
+};
+const intern = {
+    id: 1,
+    f_name: 'John',
+    l_name: 'Smith',
+};
+// console.log(intern.id," ", intern.f_name);
+//Type Assertion
+let cid = 1;
+let customerid = cid;
+//Functions
+function addNum(x, y) {
+    return x + y;
+}
+// console.log(addNum(1.5,2));
+//Void
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'Sam',
+};
+const user2 = {
+    id: 2,
+    name: 'Smith'
+};
+const add = (a, b) => {
+    return a + b;
+};
+const sub = (a, b) => {
+    return (a - b);
+};
+// console.log(sub(2,3));
+// console.log(add(2,3));
+//CLASSES
+class Person {
+    constructor(id, name, r_no) {
+        this.id = id;
+        this.name = name;
+        this.r_no = r_no;
+    }
+}
+const User = new Person(1, 'ali', 181);
+const User2 = new Person(2, 'khan', 182);
+console.log(User);
+console.log(User2);
